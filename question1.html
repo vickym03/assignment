@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1 style="color: blue; text-align: center;">
+       Q.1 &nbsp; TAKE THREE NUMBERS FROM THE USER AS INPUT AND PRINT THE
+        LARGEST  NUMBER ? </br> </br>
+    </h1>
+    <hr style="color: black; height: 2px; background-color: black;">
+    <h3 style="color:red;"> Output : </h3>
+</head>
+
+<body>
+    <script>
+        let num1 = parseInt(prompt("Enter the number 1 :"));
+        let num2 = parseInt(prompt("Enter the number 2 :"));
+        let num3 = parseInt(prompt("Enter the number 3 :"));
+
+        if (num1 > num2 && num1 > num3) {
+            document.write(" Number ONE is greatest (" + num1 + ")  than number two (" + num2 + ") and number three (" + num3 + ").");
+        }
+
+        else if (num2 > num1 && num2 > num3) {
+            document.write(" Number TWO is greatest (" + num2 + ") than number one (" + num1 + ") and number three (" + num3 + ").");
+        }
+
+
+        else if (num3 > num1 && num3 > num2) {
+            document.write(" Number THREE is greatest (" + num3 + ") than number one (" + num1 + ") and number two (" + num2 + ").");
+        } else {
+            document.write("ENTER ALL NUMBERS ARE EQUAL.");
+        }
+    </script>
+</body>
+
+</html>

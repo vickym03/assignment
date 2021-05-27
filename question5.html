@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="color: blue; text-align: center;">
+        Q.5 &nbsp; REVERSE A GIVEN STRING AND CHECK WHETHER PALINDROME OR NOT ? </br> </br>
+     </h1>
+     <hr style="color: black; height: 2px; background-color: black;">
+     <h3 style="color:red;"> Output : </h3>
+</head>
+<body>
+    <script>
+        var num = prompt("Enter the string to be reverse : ");
+
+        reverseString = (str) => {
+            let newString = " ";
+            for (let i = str.length - 1; i >= 0; i--){
+                newString += str[i];
+            } 
+            return newString;
+        }
+
+        var result = reverseString(num);
+       document.write( result + " Is the reverse of the entered string " + num + "<br> <br>")
+
+         palindromeCheck = () => {
+            const len = num.length;
+            for(let i = 0; i < len / 2; i++){
+                if(num[i] !== num[len - 1 - i]){
+                    return "Entered string is not a palindrome !";
+                }
+            }
+            return "Entered string is a palindrome !"
+        }
+      
+       var result1 = palindromeCheck(num);
+       document.write(result1)
+       
+       
+    </script>
+</body>
+</html>

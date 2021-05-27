@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="color: blue; text-align: center;">
+        Q.7 &nbsp; REMOVE THE HTML/XML TAGS FROM STRING ? </br> </br>
+     </h1>
+     <hr style="color: black; height: 2px; background-color: black;">
+     <h3 style="color:red;"> Output : </h3>
+</head>
+<body>
+     <script>
+        // var str = prompt("Enter the string with HTML/XML tags : ");
+        var str = '<p><strong><em>Skill Sanata Assignments</em></strong></p>';
+        
+        var str1 = document.createElement("str1");
+        str1.innerHTML = str;
+
+        var text = str1.textContent || str1.innerText || " ";
+        document.write( "converted into text  : " + text)
+        
+        
+     </script>
+</body>
+</html>

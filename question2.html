@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1 style="color:brown; text-align: center;">
+        Q.2 &nbsp; WRITE A JS FUNCTION AND ASK THE USER DOB AND USER AGE IS BETWEEN 18 TO 44
+        OPEN A LINK ?
+        ? </br> </br>
+    </h1>
+
+</head>
+
+<body>
+    <script>
+       calculateAge = () =>{
+          var birthDate = new Date(document.getElementById("birthDate".value));
+           var birthDateDay = birthDate.getDate();
+           var birthDateMonth = birthDate.getMonth();
+           var birthDateYear = birthDate.getFullYear();
+
+           var todayDate = new Date();
+           var todayDateDay = todayDate.getDate();
+           var todayMonth = todayDate.getMonth();
+           var todayYear = todayDate.getFullYear();
+
+           var calculatedAge = 0;
+
+           if (todayMonth > birthDateMonth) calculatedAge = todayYear - birthDateYear;
+           else if(todayMonth == birthDateMonth){
+               if(todayDate >= birthDateDay) calculatedAge = todayYear - birthDateYear;
+               else calculatedAge = todayYear - birthDateYear - 1;
+           }
+           else calculatedAge = todayYear - birthDateYear - 1;
+
+           var outputValue = calculatedAge;
+           Document.getElementById("calculatedAge").innerHTML = calculateAge;
+       } 
+    </script>
+<label>Enter the Date of Birth : </label>
+<input type="text" placeholder="yyyy/mm/dd" name="birthDate" onkeyup="calculateAge"/> <br/> <br/>
+<label> Your present age :</label>
+<p id="outputValue"></p>
+
+</body>
+
+</html>
+
